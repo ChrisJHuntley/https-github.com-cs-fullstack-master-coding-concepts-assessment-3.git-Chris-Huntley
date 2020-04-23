@@ -1,8 +1,26 @@
 .App {
   text-align: center;
   background-color: grey;
+  display:grid;
+  grid-template-columns: 3, 1fr;
+  grid-template-rows: 4, 1fr;
+  border: solid 3px black
 }
-
+.add{
+  grid-column: 1;
+  grid-row: 1;
+  background-color: chartreuse;
+}
+.list{
+  grid-column: 2;
+  grid-row: 2;
+  background-color: blue;
+}
+.deposite{
+  background-color: crimson;
+  grid-column: 3;
+  grid-row: 3;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

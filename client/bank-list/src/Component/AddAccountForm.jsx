@@ -13,6 +13,7 @@ class AddAccount extends Component {
 
         }
     }
+    // Set up my reaction to my onClick
     handleChange = (event) => {
         if (event.target.name === "accountNumber") {
             this.setState({ accountNumber: event.target.value });
@@ -25,6 +26,7 @@ class AddAccount extends Component {
         }
     }
     handleSubmission=async(event)=>{
+        // this is so that the form will not refresh
         event.preventDefault();
       
         let formsubmission={
@@ -34,6 +36,7 @@ class AddAccount extends Component {
             accountBalance:this.state.accountBalance
             
         }
+        
         let response= await fetch('/api', {
             method:"POST",
             headers:{'Accept':'application/json',
@@ -51,7 +54,7 @@ class AddAccount extends Component {
 
     render() {
         return (
-            <div>
+            <div className='add'>
                 <h1>ADDING ACCOUNT</h1>
                 <form action="">
                     <div>

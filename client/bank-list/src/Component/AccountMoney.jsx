@@ -15,7 +15,7 @@ class AccountMoney extends Component {
         if (event.target.name === "accountNumber") {
             this.setState({ accountNumber: event.target.value });
         } else if (event.target.name === "accountBalance") {
-            this.setState({ accountBalance: event.target.value });
+            this.setState({ accountBalance: event.target.value+100 });
         }
     }
     handleSubmission=async(event)=>{
@@ -24,7 +24,7 @@ class AccountMoney extends Component {
         let formsubmission={
             accountNumber:this.state.accountNumber,
             
-            accountBalance:this.state.accountBalance+100
+            accountBalance:this.state.accountBalance
             
         }
         let response= await fetch('/api', {
@@ -44,7 +44,7 @@ class AccountMoney extends Component {
 
     render() {
         return (
-            <div>
+            <div className='deposite'>
                 <h1>Deposite or Withdraw</h1>
                 <form action="">
                     <div>

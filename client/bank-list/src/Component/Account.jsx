@@ -19,7 +19,7 @@ class Account extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='list'>
                 <h1>Listing of all Accounts</h1>
                 {this.state.BankArray.map((bank) => {
                     return (

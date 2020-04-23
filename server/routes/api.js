@@ -19,7 +19,7 @@ router.put('/:Number/:Balance',(req, res)=>{
         errors? res.send(errors): res.send(results);
     })
 })
-
+// This will let you view all saved data
 router.get('/',(req, res)=>{
     // res.send(`got all`)
     console.log('getting data')

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+// Import all components to apply them to Router method
 import AddAccountForm from './AddAccountForm'
 import Account from './Account'
 import AccountMoney from './AccountMoney'
@@ -15,6 +16,7 @@ class AppContainer extends Component {
     render() {
         return(
             <div>
+                {/* Link and Route Components */}
                 <h1>Appcontainer</h1>
                 <Router>
                     <Link to='/add'>Add Account</Link>
